@@ -3,6 +3,7 @@ package br.edu.atitus.productapi.controllers;
 import br.edu.atitus.productapi.dtos.ProductResponse;
 import br.edu.atitus.productapi.services.ProductService;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class ProductController {
     private final ProductService service;
 
-    public ProductController(ProductService service) {
+    public ProductController(@Qualifier("productServiceJpa") ProductService service) {
         this.service = service;
     }
 
