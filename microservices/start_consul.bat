@@ -20,8 +20,6 @@ consul kv put config/currency-api/spring.datasource.url "jdbc:postgresql://local
 consul kv put config/currency-api/spring.datasource.username "postgres"
 consul kv put config/currency-api/spring.datasource.password "postgres"
 
-
-
 echo.
 echo Consul iniciado e configuracoes carregadas!
 pause
